@@ -3,21 +3,23 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import utils.ConfigReader;
 import utils.DriverFactory;
 
 public class BaseTest {
+
+    // ✅ This makes driver accessible to all test classes
     protected WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
-        ConfigReader.loadConfig();
         driver = DriverFactory.initDriver();
-        driver.get(ConfigReader.get("url"));
+        driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
 
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
