@@ -1,97 +1,81 @@
-# Parabank Automation Project
+# 🧪 Parabank Automation Project
 
-Automated end-to-end Selenium test project for **Parabank** demo website.  
-This project demonstrates a **Page Object Model (POM)** structure with **TestNG**, **WebDriverManager**, and **Apache POI** for data-driven testing.
+Automated end-to-end Selenium test framework for the Parabank demo website
+.
+This project demonstrates the Page Object Model (POM) architecture with TestNG, WebDriverManager, and Apache POI for data-driven testing.
 
----
-
-## Project Structure
+## 📂 Project Structure
 
 ParabankAutomation/
 │
-├── pom.xml # Maven dependencies
-├── testng.xml # TestNG suite configuration
+├── pom.xml                  # Maven dependencies
+├── testng.xml               # TestNG suite configuration
 │
 ├── src
-│ ├── main
-│ │ └── java
-│ │ └── utils
-│ │ ├── ConfigReader.java
-│ │ ├── DriverFactory.java
-│ │ └── TestDataUtil.java
-│ │
-│ └── test
-│ ├── java
-│ │ ├── base
-│ │ │ └── BaseTest.java
-│ │ │
-│ │ ├── pages
-│ │ │ ├── HomePage.java
-│ │ │ ├── LoginPage.java
-│ │ │ ├── RegisterPage.java
-│ │ │ ├── SearchResultsPage.java
-│ │ │ ├── ProductPage.java
-│ │ │ └── CartPage.java
-│ │ │
-│ │ └── tests
-│ │ ├── LoginTest.java
-│ │ ├── RegisterTest.java
-│ │ ├── HomePageTitleTest.java
-│ │ ├── SearchProductTest.java
-│ │ ├── SearchAddToCartTest.java
-│ │ └── RemoveFromCartTest.java
-│ │
-│ └── resources
-│ ├── config.properties
-│ └── testdata.xlsx
+│   ├── main
+│   │   └── java
+│   │       └── utils
+│   │           ├── ConfigReader.java
+│   │           ├── DriverFactory.java
+│   │           └── TestDataUtil.java
+│   │
+│   └── test
+│       ├── java
+│       │   ├── base
+│       │   │   └── BaseTest.java
+│       │   │
+│       │   ├── pages
+│       │   │   ├── HomePage.java
+│       │   │   ├── LoginPage.java
+│       │   │   ├── RegisterPage.java
+│       │   │   ├── SearchResultsPage.java
+│       │   │   ├── ProductPage.java
+│       │   │   └── CartPage.java
+│       │   │
+│       │   └── tests
+│       │       ├── LoginTest.java
+│       │       ├── RegisterTest.java
+│       │       ├── HomePageTitleTest.java
+│       │       ├── SearchProductTest.java
+│       │       ├── SearchAddToCartTest.java
+│       │       └── RemoveFromCartTest.java
+│       │
+│       └── resources
+│           ├── config.properties
+│           └── testdata.xlsx
 
+## ⚙️ Technologies & Dependencies
 
----
+| Tool / Library       | Version | Purpose                         |
+| -------------------- | ------- | ------------------------------- |
+| **Java**             | 17      | Core programming language       |
+| **Selenium**         | 4.21.0  | Web automation framework        |
+| **TestNG**           | 7.10.2  | Testing framework               |
+| **WebDriverManager** | 5.9.2   | Driver management               |
+| **Apache POI**       | 5.2.5   | Excel data-driven testing       |
+| **Extent Reports**   | 5.1.1   | HTML reporting                  |
+| **AssertJ**          | 3.25.3  | Fluent assertions (optional)    |
+| **Maven**            | —       | Build and dependency management |
 
-## Technologies & Dependencies
+## ✨ Features
 
-- Java 17
-- Selenium 4.21.0
-- TestNG 7.10.2
-- WebDriverManager 5.9.2
-- Apache POI 5.2.5 (Excel data-driven testing)
-- Extent Reports 5.1.1 (HTML reports)
-- AssertJ 3.25.3 (optional, for fluent assertions)
-- Maven for project build and dependency management
+✅ Page Object Model (POM) design pattern for clean maintainable code
 
----
+🧾 Data-driven testing using Excel (Apache POI)
 
-## Features
+🔐 Tests for valid & invalid login scenarios
 
-- **Page Object Model (POM)** design pattern
-- **Data-driven testing** with Excel
-- **Valid and invalid login tests**
-- **Search, add to cart, and remove from cart functionality**
-- **Configurable via `config.properties`**
-- **Cross-browser setup using WebDriverManager**
-- **TestNG test suite and reporting**
+🛒 End-to-end coverage for search, add to cart, and remove from cart flows
 
----
+⚙️ Configurable setup via config.properties
 
-## Setup Instructions
+🌐 Cross-browser execution using WebDriverManager
 
-1. **Clone the repository**
-   ```bash
-   git clone <repo_url>
-   cd ParabankAutomation
+📊 Extent Reports for rich HTML test reports
 
-2. Install dependencies 
--- mvn clean install
+🧩 TestNG integration with testng.xml suite configuration
 
-3. Update config.properties
-   baseUrl=https://parabank.parasoft.com/parabank/index.htm
-   browser=chrome
+## 🧑‍💻 Author
 
-4. Run tests
---mvn test
-
-5. Using TestNG suite:
---mvn test -DsuiteXmlFile=testng.xml
-
-
-
+Abhishek Sharma
+Automation Developer
